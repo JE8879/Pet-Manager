@@ -1,0 +1,21 @@
+# Archivos y carpetas de compilación
+bin/
+obj/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos del IDE
+.vs/
+*.suo
+*.user
+
+# Dependencias restaurables
+packages/
+
+# Archivos de logs
+*.log
+
+# Configuración local de NuGet
+.nuget/
