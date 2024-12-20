@@ -26,8 +26,8 @@ namespace Pet_Manager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=pet_care_database;Integrated Security=True;TrustSer" +
-            "verCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=FSociety\\SQLEXPRESS;Initial Catalog=pet_care_database;Integrated Secu" +
+            "rity=True;TrustServerCertificate=True")]
         public string connectionString {
             get {
                 return ((string)(this["connectionString"]));

@@ -279,6 +279,7 @@
             this.dataGridClients.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridClients.Location = new System.Drawing.Point(12, 226);
             this.dataGridClients.Name = "dataGridClients";
+            this.dataGridClients.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -354,6 +355,7 @@
             // 
             // BtnSearchClient
             // 
+            this.BtnSearchClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSearchClient.Location = new System.Drawing.Point(400, 27);
             this.BtnSearchClient.Name = "BtnSearchClient";
             this.BtnSearchClient.Size = new System.Drawing.Size(120, 32);
@@ -373,6 +375,8 @@
             // 
             // textSearchClient
             // 
+            this.textSearchClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textSearchClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSearchClient.Location = new System.Drawing.Point(122, 32);
             this.textSearchClient.Name = "textSearchClient";

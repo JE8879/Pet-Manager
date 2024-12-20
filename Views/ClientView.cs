@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pet_Manager.Views
@@ -44,7 +37,11 @@ namespace Pet_Manager.Views
 
             BtnUpdate.Click += delegate
             {
-                EditEvent?.Invoke(this, EventArgs.Empty);
+                var result = MessageBox.Show("Are you sure you want to edit the selectd Client", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    EditEvent?.Invoke(this, EventArgs.Empty);
+                }
             };
 
             BtnDelete.Click += delegate

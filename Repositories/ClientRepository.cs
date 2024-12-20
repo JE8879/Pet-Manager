@@ -60,6 +60,7 @@ namespace Pet_Manager.Repositories
                 command.Connection = connection;
                 command.CommandText = "DELETE FROM Client WHERE client_id=@client_id";
                 command.Parameters.Add("@client_id",SqlDbType.Int).Value=id;
+                command.ExecuteNonQuery ();
             }
         }
         
