@@ -19,14 +19,15 @@ namespace Pet_Manager.Repositories
             using (var command = new SqlCommand())
             {
                 connection.Open();
+                command.Connection = connection;
                 command.CommandText = "INSERT INTO Pet VALUES(@client_id,@pet_name,@species,@gender,@birth_date,@pet_weight,@color)";
-                command.Parameters.Add("@client_id", SqlDbType.Int);
-                command.Parameters.Add("@pet_name", SqlDbType.VarChar);
-                command.Parameters.Add("@species", SqlDbType.VarChar);
-                command.Parameters.Add("@gender", SqlDbType.VarChar);
-                command.Parameters.Add("@birth_date", SqlDbType.Date);
-                command.Parameters.Add("@pet_weight", SqlDbType.Float);
-                command.Parameters.Add("@color", SqlDbType.VarChar);
+                command.Parameters.Add("@client_id", SqlDbType.Int).Value = petModel.Client_id;
+                command.Parameters.Add("@pet_name", SqlDbType.VarChar).Value = petModel.Pet_name;
+                command.Parameters.Add("@species", SqlDbType.VarChar).Value = petModel.Species;
+                command.Parameters.Add("@gender", SqlDbType.VarChar).Value = petModel.Gender;
+                command.Parameters.Add("@birth_date", SqlDbType.Date).Value = petModel.Birth_date;
+                command.Parameters.Add("@pet_weight", SqlDbType.Float).Value = petModel.Pet_weight;
+                command.Parameters.Add("@color", SqlDbType.VarChar).Value = petModel.Color;
                 command.ExecuteNonQuery();
             }
         }
@@ -37,15 +38,16 @@ namespace Pet_Manager.Repositories
             using (var command = new SqlCommand())
             {
                 connection.Open();
+                command.Connection = connection;
                 command.CommandText = "UPDATE Pet SET client_id=@client_id,pet_name=@pet_name,species=@species,gender=@gender,birth_date=@birth_date,pet_weight=@pet_weight,color=@color WHERE pet_id=@pet_id";
-                command.Parameters.Add("@client_id", SqlDbType.Int);
-                command.Parameters.Add("@pet_name", SqlDbType.VarChar);
-                command.Parameters.Add("@species", SqlDbType.VarChar);
-                command.Parameters.Add("@gender", SqlDbType.VarChar);
-                command.Parameters.Add("@birth_date", SqlDbType.Date);
-                command.Parameters.Add("@pet_weight", SqlDbType.Float);
-                command.Parameters.Add("@color", SqlDbType.VarChar);
-                command.Parameters.Add("@pet_id",SqlDbType.Int);
+                command.Parameters.Add("@client_id", SqlDbType.Int).Value = petModel.Client_id;
+                command.Parameters.Add("@pet_name", SqlDbType.VarChar).Value = petModel.Pet_name;
+                command.Parameters.Add("@species", SqlDbType.VarChar).Value = petModel.Species;
+                command.Parameters.Add("@gender", SqlDbType.VarChar).Value = petModel.Gender;
+                command.Parameters.Add("@birth_date", SqlDbType.Date).Value = petModel.Birth_date;
+                command.Parameters.Add("@pet_weight", SqlDbType.Float).Value = petModel.Pet_weight;
+                command.Parameters.Add("@color", SqlDbType.VarChar).Value = petModel.Color;
+                command.Parameters.Add("@pet_id",SqlDbType.Int).Value = petModel.Pet_id;
                 command.ExecuteNonQuery();
             }
         }
@@ -83,7 +85,7 @@ namespace Pet_Manager.Repositories
                         petModel.Species = (string)reader[3];
                         petModel.Gender = (string)reader[4];
                         petModel.Birth_date = (DateTime)reader[5];
-                        petModel.Pet_weight = (float)reader[6];
+                        petModel.Pet_weight = reader.IsDBNull(6) ? 0.0f : Convert.ToSingle(reader[6]);
                         petModel.Color = (string)reader[7];
                         petList.Add(petModel);
                     }
@@ -119,7 +121,7 @@ namespace Pet_Manager.Repositories
                         petModel.Species = (string)reader[3];
                         petModel.Gender = (string)reader[4];
                         petModel.Birth_date = (DateTime)reader[5];
-                        petModel.Pet_weight = (float)reader[6];
+                        petModel.Pet_weight = reader.IsDBNull(6) ? 0.0f : Convert.ToSingle(reader[6]);
                         petModel.Color = (string)reader[7];
                         petList.Add(petModel);
                     }

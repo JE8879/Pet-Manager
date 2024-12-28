@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pet_Manager.Views
@@ -16,8 +9,10 @@ namespace Pet_Manager.Views
         {
             InitializeComponent();
             BtnClients.Click += delegate { ShowClientView?.Invoke(this, EventArgs.Empty); };
+            BtnPets.Click += delegate { ShowPetView?.Invoke(this, EventArgs.Empty); };
         }
 
         public event EventHandler ShowClientView;
+        public event EventHandler ShowPetView;
     }
 }

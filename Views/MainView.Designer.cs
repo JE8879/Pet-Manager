@@ -30,11 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnClients = new System.Windows.Forms.Button();
+            this.BtnPets = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnPets);
             this.panel1.Controls.Add(this.BtnClients);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -48,8 +50,17 @@
             this.BtnClients.Name = "BtnClients";
             this.BtnClients.Size = new System.Drawing.Size(214, 42);
             this.BtnClients.TabIndex = 0;
-            this.BtnClients.Text = "Clients";
+            this.BtnClients.Text = "Register Clients";
             this.BtnClients.UseVisualStyleBackColor = true;
+            // 
+            // BtnPets
+            // 
+            this.BtnPets.Location = new System.Drawing.Point(3, 156);
+            this.BtnPets.Name = "BtnPets";
+            this.BtnPets.Size = new System.Drawing.Size(214, 42);
+            this.BtnPets.TabIndex = 0;
+            this.BtnPets.Text = "Register Pets";
+            this.BtnPets.UseVisualStyleBackColor = true;
             // 
             // MainView
             // 
@@ -70,5 +81,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnClients;
+        private System.Windows.Forms.Button BtnPets;
     }
 }

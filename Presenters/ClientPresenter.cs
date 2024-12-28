@@ -121,7 +121,7 @@ namespace Pet_Manager.Presenters
                  clientList = clientRepository.GetByValue(this.clientView.SearchValue);
             else clientList = clientRepository.GetAll();
             
-            clientBindingSource.DataSource = clientList;
+            clientBindingSource.DataSource = clientList;                
         }
 
         private void ClearFields()
@@ -132,6 +132,8 @@ namespace Pet_Manager.Presenters
             clientView.Phone = string.Empty;
             clientView.Email = string.Empty;
             clientView.Client_address = string.Empty;
+            clientView.Registration_date = DateTime.Now;
+            clientView.IsEdit = false;
         }
     }
 }
