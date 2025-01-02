@@ -15,21 +15,33 @@ namespace Pet_Manager.Views
         public PetClientView()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
         }
 
-        public int id { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+
+        private void AssociateAndRaiseViewEvents()
+        {
+            BtnCancel.Click += delegate
+            {
+                CloseForm?.Invoke(this, EventArgs.Empty);
+            };
+
+            BtnGetPet.Click += delegate
+            {
+                RowSelected?.Invoke(this, EventArgs.Empty);
+            };
         }
-        public string first_name { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
-        }
+
 
         public void SetPetClientBindingSource(BindingSource petClientList)
         {
             dataGridClients.DataSource = petClientList; 
         }
+
+        public event EventHandler CloseForm;
+        public event EventHandler RowSelected;
 
         private static PetClientView instance;
         public static PetClientView GetInstance()
@@ -37,6 +49,10 @@ namespace Pet_Manager.Views
             if(instance == null || instance.IsDisposed)
             {
                 instance = new PetClientView();
+            }
+            else
+            {
+                instance.BringToFront();
             }
             return instance;
         }

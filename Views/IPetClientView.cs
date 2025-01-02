@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pet_Manager.Views
@@ -10,11 +6,16 @@ namespace Pet_Manager.Views
     public interface IPetClientView
     {
         // Properties
-        int id { get; set; }
-        string first_name { get; set; }
+        int Id { get; set; }
+        string FirstName { get; set; }
+
+        // Events
+        event EventHandler CloseForm;
+        event EventHandler RowSelected;
 
         // Methods
         void SetPetClientBindingSource(BindingSource petClientList);
         void Show();
+        void Close();
     }
 }

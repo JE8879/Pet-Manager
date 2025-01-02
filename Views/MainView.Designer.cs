@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnClients = new System.Windows.Forms.Button();
             this.BtnPets = new System.Windows.Forms.Button();
+            this.BtnClients = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.BtnPets);
             this.panel1.Controls.Add(this.BtnClients);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -44,28 +45,30 @@
             this.panel1.Size = new System.Drawing.Size(220, 561);
             this.panel1.TabIndex = 0;
             // 
+            // BtnPets
+            // 
+            this.BtnPets.BackColor = System.Drawing.Color.White;
+            this.BtnPets.Location = new System.Drawing.Point(3, 156);
+            this.BtnPets.Name = "BtnPets";
+            this.BtnPets.Size = new System.Drawing.Size(214, 42);
+            this.BtnPets.TabIndex = 0;
+            this.BtnPets.Text = "Register Pet";
+            this.BtnPets.UseVisualStyleBackColor = false;
+            // 
             // BtnClients
             // 
             this.BtnClients.Location = new System.Drawing.Point(3, 108);
             this.BtnClients.Name = "BtnClients";
             this.BtnClients.Size = new System.Drawing.Size(214, 42);
             this.BtnClients.TabIndex = 0;
-            this.BtnClients.Text = "Register Clients";
+            this.BtnClients.Text = "Register Client";
             this.BtnClients.UseVisualStyleBackColor = true;
-            // 
-            // BtnPets
-            // 
-            this.BtnPets.Location = new System.Drawing.Point(3, 156);
-            this.BtnPets.Name = "BtnPets";
-            this.BtnPets.Size = new System.Drawing.Size(214, 42);
-            this.BtnPets.TabIndex = 0;
-            this.BtnPets.Text = "Register Pets";
-            this.BtnPets.UseVisualStyleBackColor = true;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1334, 561);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;

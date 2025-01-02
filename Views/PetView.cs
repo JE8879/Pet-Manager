@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Pet_Manager.Views
@@ -97,7 +98,12 @@ namespace Pet_Manager.Views
         }
         public int client_id
         {
-            get => Convert.ToInt32(textClientId.Text);
+            get
+            {
+                string onlyDigits = Regex.Replace(textClientId.Text, @"\D", "");
+                return Convert.ToInt32(onlyDigits);
+            }
+
             set => textClientId.Text = value.ToString();
         }
         public string pet_name { 

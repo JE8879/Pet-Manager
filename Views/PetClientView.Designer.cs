@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridClients = new System.Windows.Forms.DataGridView();
-            this.BtnSelect = new System.Windows.Forms.Button();
+            this.BtnGetPet = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClients)).BeginInit();
             this.SuspendLayout();
@@ -39,17 +39,18 @@
             this.dataGridClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridClients.Location = new System.Drawing.Point(12, 58);
             this.dataGridClients.Name = "dataGridClients";
+            this.dataGridClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridClients.Size = new System.Drawing.Size(368, 222);
             this.dataGridClients.TabIndex = 0;
             // 
-            // BtnSelect
+            // BtnGetPet
             // 
-            this.BtnSelect.Location = new System.Drawing.Point(12, 303);
-            this.BtnSelect.Name = "BtnSelect";
-            this.BtnSelect.Size = new System.Drawing.Size(150, 23);
-            this.BtnSelect.TabIndex = 1;
-            this.BtnSelect.Text = "Select";
-            this.BtnSelect.UseVisualStyleBackColor = true;
+            this.BtnGetPet.Location = new System.Drawing.Point(12, 303);
+            this.BtnGetPet.Name = "BtnGetPet";
+            this.BtnGetPet.Size = new System.Drawing.Size(150, 23);
+            this.BtnGetPet.TabIndex = 1;
+            this.BtnGetPet.Text = "Select";
+            this.BtnGetPet.UseVisualStyleBackColor = true;
             // 
             // BtnCancel
             // 
@@ -66,7 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 338);
             this.Controls.Add(this.BtnCancel);
-            this.Controls.Add(this.BtnSelect);
+            this.Controls.Add(this.BtnGetPet);
             this.Controls.Add(this.dataGridClients);
             this.MaximizeBox = false;
             this.Name = "PetClientView";
@@ -80,7 +81,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridClients;
-        private System.Windows.Forms.Button BtnSelect;
+        private System.Windows.Forms.Button BtnGetPet;
         private System.Windows.Forms.Button BtnCancel;
     }
 }

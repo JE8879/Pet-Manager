@@ -4,9 +4,6 @@ using System.Windows.Forms;
 using Pet_Manager.Presenters.Common;
 using Pet_Manager.Views;
 using Pet_Manager.Models;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Pet_Manager.Repositories;
 
 namespace Pet_Manager.Presenters
@@ -51,8 +48,8 @@ namespace Pet_Manager.Presenters
         private void SearchPet(object sender, EventArgs e)
         {
             bool emptyValue = string.IsNullOrWhiteSpace(this.petView.SearchValue);
-            if(emptyValue == false)
-                 petList = petRepository.GetByValue(this.petView.SearchValue);
+            if (emptyValue == false)
+                petList = petRepository.GetByValue(this.petView.SearchValue);
             else petList = petRepository.GetAll();
 
             petBindingSource.DataSource = petList;
@@ -73,7 +70,7 @@ namespace Pet_Manager.Presenters
             try
             {
                 new ModelDataValidation().Validate(petModel);
-                if(this.petView.IsEdit)
+                if (this.petView.IsEdit)
                 {
                     petRepository.Edit(petModel);
                     petView.Message = "Pet edited successfully";
@@ -85,6 +82,7 @@ namespace Pet_Manager.Presenters
                 }
                 petView.IsSuccessfull = true;
                 LoadAllPets();
+                ClearFileds();
             }
             catch (Exception ex)
             {
@@ -105,6 +103,7 @@ namespace Pet_Manager.Presenters
             petView.pet_weight = currentPet.Pet_weight;
             petView.color = currentPet.Color;
             petView.IsEdit = true;
+
         }
 
         private void DeletePet(object sender, EventArgs e)
@@ -125,6 +124,19 @@ namespace Pet_Manager.Presenters
 
         private void CancelAction(object sender, EventArgs e)
         {
+            ClearFileds();
+            petView.IsEdit = false;
+        }
+
+        private void OpenClient(object sender, EventArgs e)
+        {
+            var petClientView = PetClientView.GetInstance();
+            var petClientRepository = new PetClientRepository(sqlConnectionString);
+            new PetClientPresenter(petClientView, petClientRepository);
+        }
+
+        private void ClearFileds()
+        {
             petView.pet_id = 0;
             petView.client_id = 0;
             petView.pet_name = string.Empty;
@@ -133,14 +145,6 @@ namespace Pet_Manager.Presenters
             petView.birth_date = DateTime.Now;
             petView.pet_weight = 0;
             petView.color = string.Empty;
-            petView.IsEdit = false;
-        }
-
-        private void OpenClient(object sender, EventArgs e)
-        {            
-            var petClientView = PetClientView.GetInstance();
-            var petClientRepository = new PetClientRepository(sqlConnectionString);
-            new PetClientPresenter(petClientView, petClientRepository);
         }
     }
 }
