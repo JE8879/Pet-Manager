@@ -51,7 +51,6 @@ namespace Pet_Manager.Presenters
             if (emptyValue == false)
                 petList = petRepository.GetByValue(this.petView.SearchValue);
             else petList = petRepository.GetAll();
-
             petBindingSource.DataSource = petList;
         }
 
@@ -66,6 +65,7 @@ namespace Pet_Manager.Presenters
             petModel.Birth_date = petView.birth_date;
             petModel.Pet_weight = petView.pet_weight;
             petModel.Color = petView.color;
+
 
             try
             {

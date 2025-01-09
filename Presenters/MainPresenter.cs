@@ -16,6 +16,30 @@ namespace Pet_Manager.Presenters
             this.sqlConnectionString = sqlConnectionString ?? throw new ArgumentNullException(nameof(sqlConnectionString));
             this.mainview.ShowClientView += ShowClientsView;
             this.mainview.ShowPetView += ShowPetsView;
+            this.mainview.ShowEmployeeView += ShowEmployeesView;
+            this.mainview.ShowUserView += ShowUserView;
+        }
+
+
+        /// <summary>
+        /// Handles the event to show the employee view.
+        /// </summary>
+        private void ShowEmployeesView(object sender, EventArgs e)
+        {
+            //var employeeView = EmployeeView.GetInstance((MainView)mainview);
+            var employeeView = EmployeeView.GetInstance();
+            var repository = new EmployeeRepository(sqlConnectionString);
+            new EmployeePresenter(employeeView, repository);
+        }
+
+        /// <summary>
+        /// Handles the event to show the user view.
+        /// </summary>
+        private void ShowUserView(object sender, EventArgs e)
+        {
+            var userView = UserView.GetInstance();
+            var repository = new UserRepository(sqlConnectionString);
+            new UserPresenter(userView, repository);
         }
 
         /// <summary>
@@ -36,6 +60,7 @@ namespace Pet_Manager.Presenters
             var petView = PetView.GetInstance((MainView)mainview);
             var repository = new PetRepository(sqlConnectionString);
             new PetPresenter(petView, repository, sqlConnectionString);
-        }
+        }      
+        
     }
 }

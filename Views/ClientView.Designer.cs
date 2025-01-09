@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxClientData = new System.Windows.Forms.GroupBox();
-            this.textClientId = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textAddress = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textEmail = new System.Windows.Forms.TextBox();
+            this.textClientId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textAddress = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.registrationDate = new System.Windows.Forms.DateTimePicker();
             this.textPhone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textLastName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.textFirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.registrationDate = new System.Windows.Forms.DateTimePicker();
             this.dataGridClients = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnCancel = new System.Windows.Forms.Button();
@@ -75,28 +75,6 @@
             this.groupBoxClientData.Size = new System.Drawing.Size(1060, 137);
             this.groupBoxClientData.TabIndex = 0;
             this.groupBoxClientData.TabStop = false;
-            // 
-            // textClientId
-            // 
-            this.textClientId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textClientId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textClientId.Location = new System.Drawing.Point(96, 3);
-            this.textClientId.Name = "textClientId";
-            this.textClientId.ReadOnly = true;
-            this.textClientId.Size = new System.Drawing.Size(258, 23);
-            this.textClientId.TabIndex = 2;
-            this.textClientId.Text = "0";
-            this.textClientId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Client ID:";
             // 
             // tableLayoutPanel1
             // 
@@ -132,24 +110,46 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1048, 103);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label6
+            // textClientId
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(719, 71);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "R/Date";
+            this.textClientId.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textClientId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textClientId.Location = new System.Drawing.Point(96, 3);
+            this.textClientId.Name = "textClientId";
+            this.textClientId.ReadOnly = true;
+            this.textClientId.Size = new System.Drawing.Size(258, 23);
+            this.textClientId.TabIndex = 2;
+            this.textClientId.Text = "0";
+            this.textClientId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textAddress
+            // label4
             // 
-            this.textAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textAddress.Location = new System.Drawing.Point(455, 74);
-            this.textAddress.Name = "textAddress";
-            this.textAddress.Size = new System.Drawing.Size(258, 23);
-            this.textAddress.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Email:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Client ID:";
+            // 
+            // textEmail
+            // 
+            this.textEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEmail.Location = new System.Drawing.Point(96, 74);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(258, 23);
+            this.textEmail.TabIndex = 7;
             // 
             // label5
             // 
@@ -161,24 +161,33 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Address:";
             // 
-            // textEmail
+            // textAddress
             // 
-            this.textEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEmail.Location = new System.Drawing.Point(96, 74);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(258, 23);
-            this.textEmail.TabIndex = 7;
+            this.textAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textAddress.Location = new System.Drawing.Point(455, 74);
+            this.textAddress.Name = "textAddress";
+            this.textAddress.Size = new System.Drawing.Size(258, 23);
+            this.textAddress.TabIndex = 9;
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Email:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(719, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "R/Date";
+            // 
+            // registrationDate
+            // 
+            this.registrationDate.CalendarFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrationDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.registrationDate.Location = new System.Drawing.Point(786, 74);
+            this.registrationDate.Name = "registrationDate";
+            this.registrationDate.Size = new System.Drawing.Size(259, 20);
+            this.registrationDate.TabIndex = 11;
             // 
             // textPhone
             // 
@@ -208,6 +217,16 @@
             this.textLastName.Size = new System.Drawing.Size(258, 23);
             this.textLastName.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(360, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Last Name:";
+            // 
             // textFirstName
             // 
             this.textFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -227,25 +246,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(360, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Last Name:";
-            // 
-            // registrationDate
-            // 
-            this.registrationDate.CalendarFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrationDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.registrationDate.Location = new System.Drawing.Point(786, 74);
-            this.registrationDate.Name = "registrationDate";
-            this.registrationDate.Size = new System.Drawing.Size(259, 20);
-            this.registrationDate.TabIndex = 11;
-            // 
             // dataGridClients
             // 
             this.dataGridClients.AllowUserToAddRows = false;
@@ -256,34 +256,34 @@
             this.dataGridClients.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataGridClients.BackgroundColor = System.Drawing.Color.White;
             this.dataGridClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridClients.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridClients.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridClients.Location = new System.Drawing.Point(12, 307);
             this.dataGridClients.Name = "dataGridClients";
             this.dataGridClients.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridClients.Size = new System.Drawing.Size(1060, 292);
             this.dataGridClients.TabIndex = 1;

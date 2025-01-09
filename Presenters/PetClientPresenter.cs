@@ -24,12 +24,24 @@ namespace Pet_Manager.Presenters
             // Subscribe event handler methods to view events
             this.petClientView.RowSelected += GetSelectedRow;
             this.petClientView.CloseForm += CloseForm;
+            this.petClientView.SearchEvent += SearchEvent;
             this.petClientView.SetPetClientBindingSource(petClientBindingSource);
 
             // Load Clients
             LoadAllClients();
             // Show View
             this.petClientView.Show();
+        }
+
+        private void SearchEvent(object sender, EventArgs e)
+        {
+            bool emptyValue = string.IsNullOrWhiteSpace(this.petClientView.SearchValue);
+            if(emptyValue == false)
+                petClientList = petClientRepository.SelectByValue(this.petClientView.SearchValue);
+            else
+                petClientList = petClientRepository.GetAll();
+
+            petClientBindingSource.DataSource = petClientList;
         }
 
         private void GetSelectedRow(object sender, EventArgs e)

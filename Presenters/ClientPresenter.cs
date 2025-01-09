@@ -28,7 +28,7 @@ namespace Pet_Manager.Presenters
             this.clientView.DeleteEvent += DeleteClient;
             this.clientView.CancelEvent += CancelAction;
             this.clientView.SetClientBindingSource(clientBindingSource);
-
+                
             // Load Clients
             LoadAllClients();
             // Show View
@@ -81,7 +81,7 @@ namespace Pet_Manager.Presenters
         private void SaveClient(object sender, EventArgs e)
         {
             ClientModel clientModel = new ClientModel();
-            clientModel.Id = Convert.ToInt32(clientView.Id);
+            clientModel.Id = clientView.Id;
             clientModel.First_name = clientView.First_name;
             clientModel.Last_name = clientView.Last_name;
             clientModel.Phone = clientView.Phone;

@@ -6,5 +6,7 @@ namespace Pet_Manager.Views
     {
         event EventHandler ShowClientView;
         event EventHandler ShowPetView;
+        event EventHandler ShowEmployeeView;
+        event EventHandler ShowUserView;
     }
 }

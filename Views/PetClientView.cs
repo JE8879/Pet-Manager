@@ -21,8 +21,26 @@ namespace Pet_Manager.Views
         public int Id { get; set; }
         public string FirstName { get; set; }
 
+        public string SearchValue {
+            get => textSearch.Text; 
+            set => textSearch.Text = value; 
+        }
+
         private void AssociateAndRaiseViewEvents()
         {
+            textSearch.KeyDown += delegate (object sender, KeyEventArgs e)
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    SearchEvent?.Invoke(this, EventArgs.Empty);
+                }
+            };
+
+            BtnSearch.Click += delegate
+            {
+                SearchEvent?.Invoke(this, EventArgs.Empty);
+            };
+
             BtnCancel.Click += delegate
             {
                 CloseForm?.Invoke(this, EventArgs.Empty);
@@ -42,6 +60,7 @@ namespace Pet_Manager.Views
 
         public event EventHandler CloseForm;
         public event EventHandler RowSelected;
+        public event EventHandler SearchEvent;
 
         private static PetClientView instance;
         public static PetClientView GetInstance()

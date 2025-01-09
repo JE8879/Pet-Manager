@@ -21,6 +21,7 @@ namespace Pet_Manager
             IMainview mainview = new MainView();
 
             new MainPresenter(mainview, sqlConnectionString);
+            IEmployeeView employeeView = new EmployeeView();
             Application.Run((Form)mainview);
         }
     }

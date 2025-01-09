@@ -36,14 +36,14 @@
             this.textPetId = new System.Windows.Forms.TextBox();
             this.BtnSelectClient = new System.Windows.Forms.Button();
             this.textClientId = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.CboGender = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.petBirthdate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.textPetName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textSpecies = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CboGender = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.petBirthdate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.petWeight = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -133,7 +133,7 @@
             this.textPetId.Name = "textPetId";
             this.textPetId.ReadOnly = true;
             this.textPetId.Size = new System.Drawing.Size(241, 23);
-            this.textPetId.TabIndex = 1;
+            this.textPetId.TabIndex = 17;
             this.textPetId.Text = "0";
             this.textPetId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -143,7 +143,7 @@
             this.BtnSelectClient.Location = new System.Drawing.Point(349, 3);
             this.BtnSelectClient.Name = "BtnSelectClient";
             this.BtnSelectClient.Size = new System.Drawing.Size(125, 23);
-            this.BtnSelectClient.TabIndex = 2;
+            this.BtnSelectClient.TabIndex = 1;
             this.BtnSelectClient.Text = "Select Client...";
             this.BtnSelectClient.UseVisualStyleBackColor = true;
             // 
@@ -155,9 +155,47 @@
             this.textClientId.Name = "textClientId";
             this.textClientId.ReadOnly = true;
             this.textClientId.Size = new System.Drawing.Size(241, 23);
-            this.textClientId.TabIndex = 1;
+            this.textClientId.TabIndex = 18;
             this.textClientId.Text = "0";
             this.textClientId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(727, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Pet Name:";
+            // 
+            // textPetName
+            // 
+            this.textPetName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textPetName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPetName.Location = new System.Drawing.Point(818, 3);
+            this.textPetName.Name = "textPetName";
+            this.textPetName.Size = new System.Drawing.Size(241, 23);
+            this.textPetName.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Species:";
+            // 
+            // textSpecies
+            // 
+            this.textSpecies.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textSpecies.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSpecies.Location = new System.Drawing.Point(102, 32);
+            this.textSpecies.Name = "textSpecies";
+            this.textSpecies.Size = new System.Drawing.Size(241, 23);
+            this.textSpecies.TabIndex = 3;
             // 
             // label5
             // 
@@ -200,44 +238,6 @@
             this.petBirthdate.Name = "petBirthdate";
             this.petBirthdate.Size = new System.Drawing.Size(241, 23);
             this.petBirthdate.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(727, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Pet Name:";
-            // 
-            // textPetName
-            // 
-            this.textPetName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textPetName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPetName.Location = new System.Drawing.Point(818, 3);
-            this.textPetName.Name = "textPetName";
-            this.textPetName.Size = new System.Drawing.Size(241, 23);
-            this.textPetName.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Species:";
-            // 
-            // textSpecies
-            // 
-            this.textSpecies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textSpecies.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSpecies.Location = new System.Drawing.Point(102, 32);
-            this.textSpecies.Name = "textSpecies";
-            this.textSpecies.Size = new System.Drawing.Size(241, 23);
-            this.textSpecies.TabIndex = 3;
             // 
             // label7
             // 
@@ -395,7 +395,9 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridPets.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridPets.Location = new System.Drawing.Point(12, 296);
+            this.dataGridPets.MultiSelect = false;
             this.dataGridPets.Name = "dataGridPets";
+            this.dataGridPets.ReadOnly = true;
             this.dataGridPets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPets.Size = new System.Drawing.Size(1069, 303);
             this.dataGridPets.TabIndex = 6;

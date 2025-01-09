@@ -9,5 +9,6 @@ namespace Pet_Manager.DTOs
     public interface IPetClientRepository
     {
         IEnumerable<PetClientModel> GetAll();
+        IEnumerable<PetClientModel> SelectByValue(string value);
     }
 }
