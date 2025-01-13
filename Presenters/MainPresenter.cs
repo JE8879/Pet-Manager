@@ -39,7 +39,7 @@ namespace Pet_Manager.Presenters
         {
             var userView = UserView.GetInstance();
             var repository = new UserRepository(sqlConnectionString);
-            new UserPresenter(userView, repository);
+            new UserPresenter(userView, repository, sqlConnectionString);
         }
 
         /// <summary>

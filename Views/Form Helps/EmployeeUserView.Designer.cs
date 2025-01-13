@@ -45,10 +45,13 @@
             // 
             // dataGridEmployees
             // 
+            this.dataGridEmployees.AllowUserToAddRows = false;
+            this.dataGridEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridEmployees.BackgroundColor = System.Drawing.Color.White;
             this.dataGridEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEmployees.Location = new System.Drawing.Point(12, 66);
             this.dataGridEmployees.Name = "dataGridEmployees";
+            this.dataGridEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridEmployees.Size = new System.Drawing.Size(370, 212);
             this.dataGridEmployees.TabIndex = 1;
             // 
@@ -69,8 +72,11 @@
             this.Controls.Add(this.dataGridEmployees);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSelect);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "EmployeeUserView";
-            this.Text = "EmployeeUserView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Employee List";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmployees)).EndInit();
             this.ResumeLayout(false);
 

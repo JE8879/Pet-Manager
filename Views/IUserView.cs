@@ -25,6 +25,7 @@ namespace Pet_Manager.Views
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
         event EventHandler SaveEvent;
+        event EventHandler OpenEmployee;
 
         // Methods
         void Show();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Pet_Manager.Views
@@ -29,6 +30,11 @@ namespace Pet_Manager.Views
                     MessageBox.Show($"Error al guardar el usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
+
+            BtnOpenEmployeeView.Click += delegate
+            {
+                OpenEmployee?.Invoke(this, EventArgs.Empty);
+            };
         }
 
         #region Properties
@@ -49,8 +55,14 @@ namespace Pet_Manager.Views
 
         public byte[] PasswordSalt { get; set; }
 
-        public int Employee_id { 
-            get => Convert.ToInt32(LblEmployeeId.Text); 
+        public int Employee_id {
+            
+            get
+            {
+                string onlyDigits = Regex.Replace(LblEmployeeId.Text, @"\D", "");
+                return Convert.ToInt32(onlyDigits);
+            }
+
             set => LblEmployeeId.Text = value.ToString();
         }
 
@@ -79,6 +91,7 @@ namespace Pet_Manager.Views
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
+        public event EventHandler OpenEmployee;
 
         private static UserView instance;
         public static UserView GetInstance()

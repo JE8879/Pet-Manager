@@ -34,6 +34,7 @@ namespace Pet_Manager.Models
 
         [DisplayName("Employee ID")]
         [Required(ErrorMessage = "Employee ID is Required")]
+        [Range(1, int.MaxValue, ErrorMessage = "Employee ID must be greater than 0")]
         public int Employee_id { get => employee_id; set => employee_id = value; }
     }
 }

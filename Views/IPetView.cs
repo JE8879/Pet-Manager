@@ -27,10 +27,12 @@ namespace Pet_Manager.Views
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
         event EventHandler OpenClientEvent;
+        event EventHandler CloseEvent;
 
         // Methods
         void SetPetBindingSource(BindingSource petList);
         void Show();
+        void Close();
 
     }
 }

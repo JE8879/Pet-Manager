@@ -27,6 +27,7 @@ namespace Pet_Manager.Presenters
             this.clientView.EditEvent += EditClient;
             this.clientView.DeleteEvent += DeleteClient;
             this.clientView.CancelEvent += CancelAction;
+            this.clientView.CloseEvent += CloseForm;
             this.clientView.SetClientBindingSource(clientBindingSource);
                 
             // Load Clients
@@ -34,6 +35,11 @@ namespace Pet_Manager.Presenters
             // Show View
             this.clientView.Show();
 
+        }
+
+        private void CloseForm(object sender, EventArgs e)
+        {
+            clientView.Close();
         }
 
         private void LoadAllClients()

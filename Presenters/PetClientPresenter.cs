@@ -48,6 +48,7 @@ namespace Pet_Manager.Presenters
         {
             try
             {
+
                 if (petClientBindingSource.Current is PetClientModel currentRow)
                 {
                     // Busca la instancia abierta de PetView
@@ -55,8 +56,9 @@ namespace Pet_Manager.Presenters
 
                     if (petView != null)
                     {
-                        string clientInformation = $"{currentRow.Id} - {currentRow.First_name}";
-                        petView.textClientId.Text = clientInformation;
+                        //string clientInformation = $"{currentRow.Id} - {currentRow.First_name}";
+                        //petView.textClientId.Text = clientInformation;
+                        petView.client_id = currentRow.Id;
                     }
                     this.petClientView.Close();
                 }

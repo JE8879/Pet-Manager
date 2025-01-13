@@ -79,6 +79,11 @@ namespace Pet_Manager.Views
             {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
             };
+
+            BtnClose.Click += delegate
+            {
+                CloseEvent?.Invoke(this, EventArgs.Empty);
+            };
         }
 
         #region Properties
@@ -154,6 +159,7 @@ namespace Pet_Manager.Views
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
+        public event EventHandler CloseEvent;
 
         public void SetClientBindingSource(BindingSource clientList)
         {

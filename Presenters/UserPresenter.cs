@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using Pet_Manager.Models;
 using Pet_Manager.Presenters.Common;
+using Pet_Manager.Repositories;
 using Pet_Manager.Views;
 
 namespace Pet_Manager.Presenters
@@ -11,18 +12,28 @@ namespace Pet_Manager.Presenters
         // Fields
         private IUserView userView;
         private IUserRepository userRepository;
+        private readonly string sqlConnectionString;
 
         // Constructor
-        public UserPresenter(IUserView userView, IUserRepository userRepository)
+        public UserPresenter(IUserView userView, IUserRepository userRepository, string sqlConnectionString)
         {
             this.userView = userView;
             this.userRepository = userRepository;
 
             // Subscribe event handler methods to view events
             this.userView.SaveEvent += SaveEvent;
+            this.userView.OpenEmployee += OpenEmployee;
 
             // Show View
             this.userView.Show();
+            this.sqlConnectionString = sqlConnectionString;
+        }
+
+        private void OpenEmployee(object sender, EventArgs e)
+        {
+            var employeeUserView = EmployeeUserView.GetInstance();
+            var employeeUserRepository = new EmployeeRepository(sqlConnectionString);
+            new EmployeeUserPresenter(employeeUserView, employeeUserRepository);
         }
 
         private void SaveEvent(object sender, EventArgs e)
@@ -41,7 +52,8 @@ namespace Pet_Manager.Presenters
 
             try
             {
-                new ModelDataValidation().Validate(userModel);
+                //new ModelDataValidation().Validate(userModel);
+                ValidatorUtility.Validate(userModel);
                 userRepository.CreateUser(userModel);
 
                 // Set success status

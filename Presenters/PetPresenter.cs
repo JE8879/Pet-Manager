@@ -30,6 +30,7 @@ namespace Pet_Manager.Presenters
             this.petView.DeleteEvent += DeletePet;
             this.petView.CancelEvent += CancelAction;
             this.petView.OpenClientEvent += OpenClient;
+            this.petView.CloseEvent += CloseForm;
             this.petView.SetPetBindingSource(petBindingSource);
 
             // Load Pets
@@ -37,6 +38,11 @@ namespace Pet_Manager.Presenters
             // Show View
             this.petView.Show();
             this.sqlConnectionString = sqlConnectionString;
+        }
+
+        private void CloseForm(object sender, EventArgs e)
+        {
+            petView.Close();
         }
 
         private void LoadAllPets()
@@ -69,7 +75,8 @@ namespace Pet_Manager.Presenters
 
             try
             {
-                new ModelDataValidation().Validate(petModel);
+                //new ModelDataValidation().Validate(petModel);
+                ValidatorUtility.Validate(petModel);
                 if (this.petView.IsEdit)
                 {
                     petRepository.Edit(petModel);

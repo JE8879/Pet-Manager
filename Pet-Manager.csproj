@@ -60,6 +60,7 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Presenters\ClientPresenter.cs" />
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
+    <Compile Include="Presenters\Common\ValidatorUtility.cs" />
     <Compile Include="Presenters\EmployeePresenter.cs" />
     <Compile Include="Presenters\EmployeeUserPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
@@ -96,7 +97,7 @@
     <Compile Include="Views\IEmployeeView.cs" />
     <Compile Include="Views\IMainview.cs" />
     <Compile Include="Views\IClientView.cs" />
-    <Compile Include="Views\IPetClientView.cs" />
+    <Compile Include="Views\Form Helps\IPetClientView.cs" />
     <Compile Include="Views\IPetView.cs" />
     <Compile Include="Views\IUserView.cs" />
     <Compile Include="Views\MainView.cs">
@@ -105,10 +106,10 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\PetClientView.cs">
+    <Compile Include="Views\Form Helps\PetClientView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\PetClientView.Designer.cs">
+    <Compile Include="Views\Form Helps\PetClientView.Designer.cs">
       <DependentUpon>PetClientView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PetView.cs">
@@ -144,7 +145,7 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\PetClientView.resx">
+    <EmbeddedResource Include="Views\Form Helps\PetClientView.resx">
       <DependentUpon>PetClientView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PetView.resx">

@@ -36,8 +36,14 @@ namespace Pet_Manager.Presenters
 
         private void LoadAllEmployees()
         {
+            // Clear the binding source
+            employeeBindingSource.Clear();
+            // Get all employees from the repository
             employeeList = employeeRepository.GetEmployees();
+            // Add the list to the binding source
             employeeBindingSource.DataSource = employeeList;
+            // Reset the bindings
+            employeeBindingSource.ResetBindings(false);
         }
 
         private void SearchEvent(object sender, EventArgs e)
@@ -55,6 +61,7 @@ namespace Pet_Manager.Presenters
 
         private void SaveEvent(object sender, EventArgs e)
         {
+            // Create a new EmployeeModel object and set its properties
             EmployeeModel employeeModel = new EmployeeModel();
             employeeModel.Id =  this.employeeView.Id;
             employeeModel.First_name = this.employeeView.First_name;
@@ -65,20 +72,21 @@ namespace Pet_Manager.Presenters
             employeeModel.Active = this.employeeView.Active;
 
             try
-            {
-                new ModelDataValidation().Validate(employeeModel);
+            {                
+                // Validate the model
+                ValidatorUtility.Validate(employeeModel);
                 if(this.employeeView.IsEdit)
                 {
                     employeeRepository.Edit(employeeModel);
-                    employeeView.Message = "Employee edited successfully";
+                    employeeView.Message = "Employee edited successfully";                    
                 }
                 else
                 {
                     employeeRepository.Add(employeeModel);
-                    employeeView.Message = "Employee added successfully";
+                    employeeView.Message = "Employee added successfully";                    
                 }
-                employeeView.IsSuccessfull = true;
                 LoadAllEmployees();
+                employeeView.IsSuccessfull = true;       
                 ClearFields();
             }
             catch (Exception ex)
@@ -90,6 +98,7 @@ namespace Pet_Manager.Presenters
 
         private void EditEvent(object sender, EventArgs e)
         {
+            // Get the current employee from the binding source
             EmployeeModel currentEmployee = (EmployeeModel)employeeBindingSource.Current;
             employeeView.Id = currentEmployee.Id;
             employeeView.First_name = currentEmployee.First_name;

@@ -32,13 +32,32 @@ namespace Pet_Manager.Presenters
 
             // Load Employees
             LoadAllEmployees();
+            // Show the view
+            this.employeeUserView.Show();
         }
 
         private void GetSelectedRow(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
+            var currentDynamicEmployee = employeeBindingSource.Current;
+            if (currentDynamicEmployee != null)
+            {
+                EmployeeModel currentEmployee = new EmployeeModel
+                {
+                    Id = (int)currentDynamicEmployee.GetType().GetProperty("Id").GetValue(currentDynamicEmployee, null),
+                    //First_name = (string)currentDynamicEmployee.GetType().GetProperty("First_name").GetValue(currentDynamicEmployee, null),
+                };
 
+                // Busca la instancia abierta de UserView
+                UserView userView = Application.OpenForms.OfType<UserView>().SingleOrDefault();
+                if (userView != null)
+                {
+                    //string employeeInformation = $"{currentEmployee.Id} - {currentEmployee.First_name}";
+                    userView.Employee_id = currentEmployee.Id;
+                }
+
+                this.employeeUserView.Close();
+            }
+        }
         private void LoadAllEmployees()
         {
             employees = employeeRepository.GetBasicEmployeeInfo();

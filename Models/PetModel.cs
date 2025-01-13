@@ -17,10 +17,12 @@ namespace Pet_Manager.Models
 
         // Properties -- Validations
         [DisplayName("Pet ID")]
+
         public int Pet_id { get => pet_id; set => pet_id = value; }
 
         [DisplayName("Client ID")]
         [Required(ErrorMessage ="Client ID is Required")]
+        [Range(1, int.MaxValue, ErrorMessage = "Client ID must be greater than 0")]
         public int Client_id { get => client_id; set => client_id = value; }
 
         [DisplayName("Pet Name")]
@@ -41,12 +43,12 @@ namespace Pet_Manager.Models
 
         [DisplayName("Pet Weight")]
         [Required(ErrorMessage = "Pet Weight is Required")]
+        [Range(1, float.MaxValue, ErrorMessage = "Pet Weight must be greater than 0")]
         public float Pet_weight { get => pet_weight; set => pet_weight = value; }
 
         [DisplayName("Color")]
         [Required(ErrorMessage = "Pet Color is Required")]
         public string Color { get => color; set => color = value; }
 
-        
     }
 }
